@@ -177,6 +177,46 @@ p.carousel-text {
   gap: 10px;
 }
 
+/* doctors info */
+.doctors-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.doctors-info .profile {
+  width: 93%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.doctors-info .profile .profile-img {
+  width: 100%;
+  height: 300px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  margin: auto;
+  border: 1px solid orange;
+}
+.doctors-info .profile h4 {
+  color: #666;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  padding-bottom: 0;
+}
+.doctors-info .profile li {
+  padding-right: 1rem;
+  font-size: 0.8rem;
+  color: #555;
+  list-style-type: none;
+}
+.doctors-info .profile li::before {
+  content: "- ";
+}
+
 /* Call us */
 .cta {
   background-image: url(../assets/images/bg_02.jpg);
@@ -196,6 +236,7 @@ p.carousel-text {
   font-size: 2rem;
   font-weight: 500;
   color: rgb(255, 255, 255);
+  text-align: center !important;
 }
 
 .cta-text {
@@ -237,11 +278,16 @@ p.carousel-text {
 .services-top .services-title {
   font-size: 2rem;
   font-weight: 600;
+  text-align: center;
+}
+.services-top .services-text {
+  text-align: center;
 }
 
 .service-cont {
   max-width: 100vw;
   background-color: #f4f8fb;
+  text-align: center !important;
 }
 
 .icon-box-icon img {
@@ -254,9 +300,8 @@ p.carousel-text {
   font-weight: 600;
 }
 
-.icon-box-text p {
+.icon-box-text p, .icon-box-text li {
   text-align: justify;
-  font-size: 0.8rem;
   color: #666;
 }
 
@@ -400,7 +445,21 @@ div.gallery-title {
   }
   /* Services Section */
   .service-cont {
-    max-width: 48%;
+    max-width: 100%;
+  }
+  .services-title, .services-text {
+    text-align: center !important;
+  }
+  .doctors-info {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 1rem 3rem;
+  }
+  .doctors-info .profile {
+    width: 45% !important;
+    margin: unset !important;
   }
 }
 /* ------------------- 768px < Laptops < 1200px ------------------- */
@@ -455,6 +514,14 @@ div.gallery-title {
   }
   div.info-form-container {
     padding: 1rem;
+  }
+  /* Doctors info */
+  .doctors-info {
+    max-width: 1320px;
+    margin: auto;
+  }
+  .doctors-info .profile {
+    max-width: 18rem;
   }
   /* CTA Section */
   .cta-title br, cta-text br {

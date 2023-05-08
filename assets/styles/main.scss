@@ -193,6 +193,55 @@ p.carousel-text{
     }
 }
 
+
+/* doctors info */
+.doctors-info{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+
+    .profile{
+        width:93%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        // border: 1px solid #999;
+        
+        
+        .profile-img{
+            width: 100%;
+            height: 300px;
+            background-size: cover!important;
+            background-position: center !important;
+            background-repeat: no-repeat!important;
+            margin:auto;
+            border:1px solid orange;
+        }
+        
+        h4{
+            color: #666;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.5rem;
+            padding-bottom: 0;
+        }
+        
+        li{
+            padding-right: 1rem;
+            font-size: 0.8rem;
+            color: #555;
+            list-style-type: none;
+
+            &::before{
+                content: '- '
+            }
+        }
+    }
+    
+}
+
 /* Call us */
 .cta{
     background-image: url(../assets/images/bg_02.jpg);
@@ -213,12 +262,14 @@ p.carousel-text{
     font-size: 2rem;
     font-weight: 500;
     color: $light;
+    text-align: center !important;
 }
 
 .cta-text{
     font-size: 0.9rem;
     color: $light;
     display: none;
+    // text-align: center!important;
 }
 
 .cta-content-align{
@@ -258,12 +309,18 @@ p.carousel-text{
     .services-title{
         font-size: 2rem;
         font-weight: 600;
+        text-align: center;
+    }
+
+    .services-text{
+        text-align: center;
     }
 }
 
 .service-cont{
     max-width: 100vw;
     background-color: #f4f8fb;
+    text-align: center !important;
 }
 
 .icon-box-icon img{
@@ -276,9 +333,8 @@ p.carousel-text{
     font-weight: 600;
 }
 
-.icon-box-text p{
+.icon-box-text p, .icon-box-text li{
     text-align: justify;
-    font-size: 0.8rem;
     color: #666;
 }
 
@@ -447,7 +503,25 @@ div.gallery-title{
 
     /* Services Section */
     .service-cont{
-       max-width: 48%;
+       max-width: 100%;
+
+    }
+    
+    .services-title, .services-text{
+     text-align: center !important;
+    }
+
+    .doctors-info{
+        display: flex !important;
+        flex-wrap: wrap !important;
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 1rem 3rem;
+        
+        .profile{
+            width: 45% !important;
+            margin: unset!important;
+        }
     }
 
 }
@@ -520,6 +594,15 @@ div.gallery-title{
         padding: 1rem;
     }
 
+    /* Doctors info */
+    .doctors-info{
+        max-width: 1320px;
+        margin:auto;
+
+        .profile{
+            max-width: 18rem;
+        }
+    }
     /* CTA Section */
     .cta-title, cta-text{
         br{
