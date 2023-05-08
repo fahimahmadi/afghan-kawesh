@@ -227,7 +227,7 @@ p.carousel-text{
             background-position: center !important;
             background-repeat: no-repeat!important;
             margin:auto;
-            border:1px solid orange;
+            border-radius: 25% 5px 25% 5px;
         }
         
         h4{
@@ -567,6 +567,10 @@ div.gallery-title{
             flex-direction: row;
             position: unset;
             margin: unset;
+
+            li{
+                background-color: unset;
+            }
         }
 
         .header-bottom-search{

@@ -206,7 +206,7 @@ p.carousel-text {
   background-position: center !important;
   background-repeat: no-repeat !important;
   margin: auto;
-  border: 1px solid orange;
+  border-radius: 25% 5px 25% 5px;
 }
 .doctors-info .profile h4 {
   color: #666;
@@ -495,6 +495,9 @@ div.gallery-title {
     flex-direction: row;
     position: unset;
     margin: unset;
+  }
+  .header-bottom-content .nav-menu li {
+    background-color: unset;
   }
   .header-bottom-content .header-bottom-search {
     display: inline-block;
