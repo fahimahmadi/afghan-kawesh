@@ -22,6 +22,11 @@ html {
 header{
     background-color: $primary;
     border-bottom: 3px solid coral;
+    position: fixed;
+    left:0;
+    right:0;
+    z-index:999;
+    background-color: #1bb184;
 }
 
 /* Header-top */
@@ -35,8 +40,9 @@ header{
     justify-content: space-between;
     align-items: center;
     direction: ltr;
-    padding: 1rem;
+    padding: 0 1rem;
     position: relative;
+    
 }
 
 /* Logo */
@@ -48,8 +54,8 @@ header{
 .nav-menu{
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 115px;
+    position: fixed;
+    top: 95px;
     left: 0;
     width: 100%;
     z-index: 1;
@@ -59,8 +65,12 @@ header{
 
     li{
         list-style: none;
-        background-color: rgba($primary, 0.5);
+        background-color: rgba(#333, 0.7);
         padding: 0.5rem 1rem;
+
+        &:hover{
+            background-color: rgba(#333, 0.5);
+        }
     }
 
     a{
@@ -482,6 +492,10 @@ div.gallery-title{
 
     img#logo-top-header{
         display: none;
+    }
+
+    .nav-menu{
+        top: 162px;
     }
 
 

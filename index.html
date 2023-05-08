@@ -54,6 +54,21 @@
 
     <script src="./scripts/script.js" defer></script>
 
+    <script defer>
+      const header = document.querySelector('header');
+      const sections = document.querySelectorAll('section');
+
+      sections.forEach(section => {
+        section.addEventListener('click', () => {
+          window.scrollTo({
+            top: section.offsetTop - header.offsetHeight,
+            behavior: 'smooth'
+          });
+        });
+      });
+
+    </script>
+
     <title>Afghan-Kawesh Speciality Hospital</title>
   </head>
   <body>
@@ -105,6 +120,7 @@
           <ul class="nav-menu">
             <li><a href="#home">خانه</a></li>
             <li><a href="#aboutus">درباره ما</a></li>
+            <li><a href="#doctors">همکاران ما</a></li>
             <li><a href="#services">خدمات</a></li>
             <li><a href="#contactus">ارتباط با ما</a></li>
           </ul>
@@ -182,7 +198,7 @@
                   </h3>
                   <p class="carousel-text d-none d-md-block">
                     با بهره گیری از تجهیزات پیشرفته و کادری مجرب و متعهد, به
-                    منظور ارایه خدمات بهداشتی-درمانی و طبی با کیفیت و بی نظیر
+                    منظور ارایه خدمات طبی و معالجوی با کیفیت و بی نظیر
                     همواره در خدمت شما عزیزان هستیم.
                   </p>
                 </div>
@@ -200,7 +216,7 @@
                   </h3>
                   <p class="carousel-text d-none d-md-block">
                     با بهره گیری از تجهیزات پیشرفته و کادری مجرب و متعهد, به
-                    منظور ارایه خدمات بهداشتی-درمانی و طبی با کیفیت و بی نظیر
+                    منظور ارایه خدمات طبی و معالجوی با کیفیت و بی نظیر
                     همواره در خدمت شما عزیزان هستیم.
                   </p>
                 </div>
@@ -342,7 +358,7 @@
       </section>
 
       <!-- ------------------- Doctors Info section -------------------- -->
-      <section class="doctors-info border d-block" id="doctors-info">
+      <section class="doctors-info border d-block" id="doctors">
         <div class="profile">
           <div
             style="background:url('./assets/images/doctors/dr_noori.jpg');"
@@ -968,46 +984,67 @@
               class="footer-logo"
             />
             <h3 class="text-secondary fw-bold text-end mt-3">
-              کلینیک تخصصی افغان کاوش
+              شفاخانه تخصصی افغان کاوش
             </h3>
             <p class="small text-secondary text-justify">
-              کلینیک افغان کاوش یک مرکز درمانی خصوصی در افغانستان است که در سال
-              ۱۴۰۱ تأسیس شده است. این کلینیک با هدف ارائه خدمات بهداشتی و درمانی
-              با کیفیت و با قیمت مناسب برای جامعه افغانستانی تأسیس شده است. این
-              مرکز درمانی برای ارائه خدمات بهداشتی و درمانی به بیماران از جمله
-              خدمات مشاوره، پزشکی عمومی، جراحی، باروری و زایمان، اورولوژی،
-              داخلی، قلب و عروق، گوش، حلق و بینی و ... تجهیز شده است. افرادی که
-              به دنبال درمان مناسب و با کیفیت در افغانستان هستند، می‌توانند از
-              خدمات کلینیک افغان کاوش بهره‌مند شوند.
+            شفاخانه تخصصی سی بستر افغان کاوش در شهر هرات، درب ملک به سمت خواجه کله موقعیت دارد.
+            ساخت این شفاخانه با تمام معیارهای ملی و بین المللی در سال ۱۳۹۷ آغاز شد و‌ در سال ۱۴۰۱ به پایه اکمال رسید. این شفاخانه در پنج منزل تعمیر گردیده است که منزل منفی یک آن برای بخش های تشخیصه، منزل همکف برای مریضان سراپای، منزل اول برای مریضان بستری، منزل دوم عملیات خانه ها و بستر مریضان عملیاتی، منزل سوم نیز برای اطفال و نسایی ولادی می‌باشد.و در مجموع سی بستر آن فعال می‌باشد.
+            این شفاخانه  با هدف ارائه خدمات طبی و معالجوی با کیفیت و با قیمت مناسب برای هموطنان عزیز تأسیس شده است.
+            شفاخانه تخصصی افغان‌کاوش دارای سه بخش بوده که شامل :
+            <ol>
+              <li style="font-size:0.85rem;color:#555;margin-right:2rem;">بالینی (بستری)</li>
+              <dl style="font-size:0.8rem;color:#555;margin-right:2.3rem;">
+              عاجل - زایشگاه  - کودکان - داخله اطفال - جراحی   - اتاقهای عمل- دندان
+              </dl>
+              
+              <li style="font-size:0.85rem;color:#555;margin-right:2rem;">پاراکلینیک</li>
+              <dl style="font-size:0.8rem;color:#555;margin-right:2.3rem;">
+              رادیولوژی و سونوگرافی - اسکوپی (آندوسکوپی و کلونوسکوپی) -لابراتوار و آزمایشگاه بیوشیمی - انتقال خون - دواخانه
+              </dl>
+              <li style="font-size:0.85rem;color:#555;margin-right:2rem;">کلینیک</li>
+              <dl style="font-size:0.8rem;color:#555;margin-right:2.3rem;">
+                نسایی ولادی - نازایی -داخله عمومی - قلب  - غدد - هاضمه - شش - گرده و مجاری ادراری (اورولوژی) - جراحی مغز و اعصاب و ستون فقرات - جراحی عمومی - ارتوپیدی و‌تروماتولوژی - گوش و گلو و بینی - اطفال ‌نوزادان -
+              </dl>
+            </ol>
+
             </p>
           </div>
         </div>
         <div class="footer-bottom mt-3 bg-dark px-0 pb-3 m-0">
           <ul class="footer-nav-menu d-flex justify-content-center">
-            <li>
+            <li class="pt-3">
               <a href="#home" class="text-decoration-none text-light">خانه</a>
             </li>
-            <li>
+            <li class="pt-3">
               <a href="#aboutus" class="text-decoration-none text-light"
                 >درباره ما</a
               >
             </li>
-            <li>
+            <li class="pt-3">
+              <a href="#doctors" class="text-decoration-none text-light"
+                >همکاران ما</a
+              >
+            </li>
+            <li class="pt-3">
               <a href="#contactus" class="text-decoration-none text-light"
                 >تماس با ما</a
               >
             </li>
-            <li>
+            <li class="pt-3">
               <a href="#services" class="text-decoration-none text-light"
                 >خدمات ما</a
               >
             </li>
           </ul>
 
-          <div class="bg-warning text-center text-secondary py-1">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <span>۲۸۳ ۴۰۰ ۷۹۲ ۹۳+</span>
-            <span>آدرس: شهر هرات - درب ملک به سمت خواجه کله - شفاخانه تخصصی سی بستر افغان کاوش</span>
+          <div class="bg-warning text-center text-secondary p-3">
+            <p>
+              شماره تماس: ۲۸۳ ۴۰۰ ۷۹۲ ۹۳+
+              <i class="fa fa-phone" aria-hidden="true"></i>
+
+            </p>
+            <p>آدرس: شهر هرات - درب ملک به سمت خواجه کله - شفاخانه تخصصی سی بستر افغان کاوش</p>
+            <p>آدرس ایمیل: info@afghankaweshhospital.com</p>
           </div>
         </div>
       </div>
